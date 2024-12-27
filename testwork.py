@@ -23,7 +23,7 @@ Base = declarative_base()
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 # Celery setup
-celery_app = Celery("tasks", broker="redis://localhost:6379/0")
+celery_app = Celery("tasks", broker="redis://redis:6379/0")
 
 # API key for authentication
 API_KEY = "secure_api_key"
